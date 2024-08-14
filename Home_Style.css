@@ -3,27 +3,34 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
+    align-items: center;
+    background-color: #f5f5f5;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* يجعل الطول الأدنى للصفحة 100% من ارتفاع الشاشة */
 }
 
 header {
     display: flex;
     justify-content: space-between;
-    padding: 10px 50px;
+    padding: 1rem 3rem; /* استخدم وحدات نسبية */
     background-color: #f8f8f8;
     border-bottom: 1px solid #ddd;
-    
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 1.5rem; /* وحدات نسبية */
     font-weight: bold;
-    color:#e63946 ;
+    color: #e63946;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 1.5rem; /* وحدات نسبية */
     margin: 0;
     padding: 0;
 }
@@ -38,17 +45,20 @@ nav a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 100px 50px;
+    padding: 5rem 3rem; /* استخدم وحدات نسبية */
     background-color: #f2f2f2;
+    flex-wrap: wrap; /* يتيح للمحتوى الالتفاف عند الشاشات الأصغر */
 }
 
 .hero-content {
-    max-width: 600px;
+    max-width: 37.5rem; /* استخدم وحدات نسبية */
+    flex: 1;
+    margin-right: 2rem; /* إضافة مسافة بين النص والصورة */
 }
 
 .hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
+    font-size: 3rem; /* استخدم وحدات نسبية */
+    margin-bottom: 1.5rem; /* استخدم وحدات نسبية */
 }
 
 .highlight {
@@ -56,18 +66,18 @@ nav a {
 }
 
 .hero p {
-    font-size: 18px;
+    font-size: 1.125rem; /* استخدم وحدات نسبية */
     line-height: 1.5;
-    margin-bottom: 30px;
+    margin-bottom: 2rem; /* استخدم وحدات نسبية */
 }
 
 .button {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 0.5rem 1rem; /* استخدم وحدات نسبية */
     background-color: #333;
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 0.3125rem; /* استخدم وحدات نسبية */
     transition: background-color 0.3s;
 }
 
@@ -76,53 +86,65 @@ nav a {
     color: #fff;
 }
 
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .hero-image img {
-    max-width: 400px;
-    
+    max-width: 100%; /* تأكد من أن الصورة تأخذ العرض الكامل المتاح */
+    height: auto; /* لضمان الحفاظ على نسبة العرض إلى الارتفاع */
     border-radius: 50%;
 }
 
 footer {
     background-color: #333;
     color: #fff;
-    padding: 20px 50px;
     text-align: center;
+    padding: 1rem 0; /* استخدم وحدات نسبية */
+    width: 100%;
 }
 
 .footer-content {
-    max-width: 800px;
+    max-width: 50rem; /* استخدم وحدات نسبية */
     margin: 0 auto;
 }
 
 .footer-content p {
     margin: 0;
-    font-size: 14px;
+    font-size: 0.875rem; /* استخدم وحدات نسبية */
 }
 
 .social-media {
     list-style: none;
     padding: 0;
-    margin: 10px 0 0;
+    margin: 0.625rem 0 0; /* استخدم وحدات نسبية */
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 0.625rem; /* استخدم وحدات نسبية */
 }
 
 .social-media a {
     color: #fff;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 0.875rem; /* استخدم وحدات نسبية */
     transition: color 0.3s;
 }
+
 nav a:hover, nav a.active {
     color: #e63946;
 }
+
 a:hover {
     color: #e63946;
 }
+
 .social-media a:hover {
     color: #e63946;
 }
+
 .animated-text {
     animation: fadeIn 2s ease-in-out, moveUp 2s ease-in-out;
 }
@@ -138,9 +160,60 @@ a:hover {
 
 @keyframes moveUp {
     0% {
-        transform: translateY(20px);
+        transform: translateY(1.25rem); /* استخدم وحدات نسبية */
     }
     100% {
         transform: translateY(0);
     }
+}
+
+/* استعلامات الوسائط */
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .hero-content {
+        margin-right: 0;
+        margin-bottom: 2rem; /* إضافة مسافة تحت النص عند الشاشات الأصغر */
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-image img {
+        max-width: 20rem; /* تعديل حجم الصورة عند الشاشات الأصغر */
+    }
+
+    .footer-content {
+        max-width: 100%;
+        padding: 1rem;
+    }
+}
+.image-container {
+    width: 300px; /* عرض الحاوية */
+    height: 300px; /* ارتفاع الحاوية */
+    overflow: hidden; /* لإخفاء أي جزء من الصورة يتجاوز الحاوية */
+    border-radius: 50%; /* لتطبيق الشكل الدائري على الحاوية */
+    display: flex;
+    justify-content: center; /* لتوسيع الصورة في المركز */
+    align-items: center;
+}
+
+.image-container img {
+    width: 100%; /* تأكد من ملء الحاوية */
+    height: 100%; /* تأكد من ملء الحاوية */
+    object-fit: cover; /* لضمان تغطية الصورة داخل الدائرة بشكل مناسب */
+    border-radius: 50%; /* لجعل الصورة دائرية */
 }
