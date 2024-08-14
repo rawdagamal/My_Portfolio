@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eg/ Rawda Gamal</title>
-    <link rel="stylesheet" href="Project_style.css">
+    <link rel="stylesheet" href="about_style.css">
     <link rel="icon" type="image/x-icon" href="icons8-avatar-50.png">
 </head>
 <body>
     <header>
-        <div class="logo">NETWORK ENGINEER</div>
+        <div class="logo">MY PORTFOLIO</div>
 
         <nav>
             <ul>
@@ -23,525 +23,280 @@
     <main>
         <section id="projects">
             <h2>PROJECTS IN CCNA ON PACKET TRACER</h2>
-            <h3>Project 1: Setting Up a Small Office Network</h3>
+
+            <h3>Project 7: VTP and VLAN Configuration with EtherChannel and Port Security</h3>
+
             <p><strong>Objective:</strong></p>
-            <p>Design and implement a small office network including routers and switches, and configure static IP addresses and DHCP.</p>
-            
-            <p><strong>Requirements:</strong></p>
-            <ol>
-                <li><strong>Devices:</strong>
-                    <ul>
-                        <li>Router</li>
-                        <li>Switch</li>
-                        <li>Three Personal Computers (PCs)</li>
-                    </ul>
-                </li>
-
-    <!-- Image at the beginning of the project -->
-    <img src="Small office Network.jpg" alt="Small Office Network Setup" >
-                <li><strong>Configurations:</strong>
-                    <ul>
-                        <li>Assign static IP addresses to each device in the network.</li>
-                        <li>Configure DHCP on the router to provide dynamic IP addresses to devices.</li>
-                    </ul>
-                </li>
-            </ol>
-
-            <p><strong>Steps:</strong></p>
-            <ol>
-                <li><strong>Step 1: Physical Network Setup</strong>
-                    <ol>
-                        <li>Connect the PCs to the switch using Ethernet cables.</li>
-                        <li>Connect the switch to the router.</li>
-                    </ol>
-                </li>
-                <li><strong>Step 2: Assign Static IP Addresses</strong>
-                    <ol>
-                        <li>Assign the following IP addresses to the PCs:
-                            <ul>
-                                <li>PC1: 192.168.1.10</li>
-                                <li>PC2: 192.168.1.11</li>
-                                <li>PC3: 192.168.1.12</li>
-                                <li>Subnet Mask: 255.255.255.0</li>
-                                <li>Default Gateway: 192.168.1.1 (Router’s IP address)</li>
-                            </ul>
-                        </li>
-                    </ol>
-                </li>
-                <li><strong>Step 3: Router Configuration</strong>
-                    <ol>
-                        <li>Assign IP Address to the Router:
-                            <ul>
-                                <li>Router’s IP Address: 192.168.1.1</li>
-                                <li>Subnet Mask: 255.255.255.0</li>
-                            </ul>
-                        </li>
-                    </ol>
-                </li>
-                <li><strong>Step 4: Configure DHCP</strong>
-                    <ol>
-                        <li>Enter the configuration mode on the router:
-                            <pre class="code"><code>
-Router> enable
-Router# configure terminal
-Router(config)# interface GigabitEthernet0/0
-Router(config-if)# ip address 192.168.1.1 255.255.255.0
-Router(config-if)# no shutdown
-Router(config-if)# exit
-                            </code></pre>
-                        </li>
-                        <li>Set up DHCP:
-                            <pre class="code"><code>
-Router(config)# ip dhcp pool OFFICE
-Router(dhcp-config)# network 192.168.1.0 255.255.255.0
-Router(dhcp-config)# default-router 192.168.1.1
-Router(dhcp-config)# dns-server 8.8.8.8
-Router(dhcp-config)# exit<br>
-                            </code></pre>
-                        </li>
-                    </ol>
-                </li>
-                <li><strong>Step 5: Verify the Solution</strong>
-                    <ol>
-                        <li>Ensure all PCs are correctly connected to the switch and the router.</li>
-                        <li>Check that all PCs have received the correct IP addresses.</li>
-                        <li>Execute the ping command from one of the PCs to verify the connection to the router:
-                            <pre class="code"><code>
-ping 192.168.1.1
-                            </code></pre>
-                        </li>
-                        <li>Confirm that you receive a response from the router.</li>
-                    </ol>
-                </li>
-            </ol>
-
-            <p><strong>Verification Questions:</strong></p>
-            <ul>
-                <li>Are all PCs correctly connected to the network? <ul class="YES">YES</ul></li>
-                <li>Have all PCs received the correct IP addresses (static or dynamic)? <ul class="YES">YES</ul></li>
-                <li>Can the PCs connect to the router using the ping command? <ul class="YES">YES</ul></li>
-            </ul>
-            <!-- Link to download the Word document -->
-    <h2>Download Project Document</h2>
-    <p>You can download the complete project  here:</p>
-    <a href="project1.pkt" download  class="button">Download Project </a><br>
-
-
-
-    <h3>Project 2: Configuring Static Routing and OSPF</h3>
-
-    <strong><p>Objective</p></strong>
-    <p>Set up and configure Static Routing and OSPF (Open Shortest Path First) between routers.</p>
-
-    <p><strong>Requirements</p></section></strong>
-        
-    <ul>
-        <li><strong>Devices:</strong></li>
-        <ul>
-            <li>Two Routers</li>
-            <li>Two Switchs</li>
-            <li>Three Personal Computers (PCs)</li><br>
-        </ul>
-          <!-- Image at the beginning of the project -->
-    <img src="Project2.jpg" alt="Project2" >
-        <li><strong>Configurations:</strong></li><br>
-        <ul>
-            <li>Assign static IP addresses to each device in the network.</li>
-            <li>Configure Static Routing and OSPF between the routers.</li><br>
-        </ul>
-    </ul>
-
-    <p><strong>Steps</strong></p>
-    <li><strong>Step 1: Physical Network Setup</strong>
-    
-    <ol>
-        <li>Connect the PCs to the switch using Ethernet cables.</li>
-        <li>Connect the Switchs to each router.</li>
-        <li>Connect the routers to each other via the serial interface.</li><br>
-    </ol>
-    <li><strong>Step 2: </strong>
-
-
-    <p>Assign the following IP addresses to the routers:</p>
-    <ul>
-        <li><strong>Router1:</strong></li>
-        <ul>
-            <li>Ethernet Interface: 192.168.1.1</li>
-            <li>Serial Interface: 10.0.0.1</li>
-        </ul>
-        <li><strong>Router2:</strong></li>
-        <ul>
-            <li>Ethernet Interface: 192.168.2.1</li>
-            <li>Serial Interface: 10.0.0.2</li>
-        </ul>
-    </ul>
-    <li><strong>Step 3: Configure Static Routing</strong>
-    
-    <p><strong>Enter configuration mode on Router1:</strong></p>
-    <pre class="code"><code>
-Router1> enable
-Router1# configure terminal
-Router1(config)# interface GigabitEthernet0/1
-Router1(config-if)# ip address 192.168.1.1 255.255.255.0
-Router1(config-if)# no shutdown
-Router1(config-if)# exit
-Router1(config)# interface GigabitEthernet0/0
-Router1(config-if)# ip address 10.0.0.1 255.0.0.0
-Router1(config-if)# no shutdown
-Router1(config-if)# exit
-Router1(config)# ip route 192.168.2.0 255.255.255.0 10.0.0.2
-Router1(config)# exit<br>
-</code></pre>
-
-    <p><strong>Enter configuration mode on Router2:</strong></p>
-    <pre class="code"><code>
-Router2> enable
-Router2# configure terminal
-Router2(config)# interface GigabitEthernet0/1
-Router2(config-if)# ip address 192.168.2.1 255.255.255.0
-Router2(config-if)# no shutdown
-Router2(config-if)# exit
-Router2(config)# interface GigabitEthernet0/0
-Router2(config-if)# ip address 10.0.0.2 255.0.0.0
-Router2(config-if)# no shutdown
-Router2(config-if)# exit
-Router2(config)# ip route 192.168.1.0 255.255.255.0 10.0.0.1
-Router2(config)# exit<br>
-</code></pre>
-
-<li><strong>Step 4: Configure OSPF</strong></li>
-    
-    <p><strong>Enter configuration mode on Router1:</strong></p>
-    <pre class="code"><code>
-Router1> enable
-Router1# configure terminal
-Router1(config)# router ospf 1
-Router1(config-router)# network 192.168.1.0 0.0.0.255 area 0
-Router1(config-router)# network 10.0.0.0 255.255.255 area 0
-Router1(config-router)# exit
-Router1(config)# exit<br>
-</code>  </pre>
-
-    <p><strong>Enter configuration mode on Router2:</strong></p>
-    <pre class="code"><code>
-Router2> enable
-Router2# configure terminal
-Router2(config)# router ospf 1
-Router2(config-router)# network 192.168.2.0 0.0.0.255 area 0
-Router2(config-router)# network 10.0.0.255.255.255 area 0
-Router2(config-router)# exit
-Router2(config)# exit<br>
-</code> </pre>
-
-    <h3>Verify the Solution</h3>
-    <ol>
-        <li>Ensure all PCs are correctly connected to the network.</li>
-        <li>Check that all PCs have received the correct IP addresses.</li>
-        <li>Execute the <code>ping</code> command from one of the PCs to verify the connection to the router:</li>
-    </ol>
-    <pre class="code"><code>
-ping 192.168.1.1
-ping 192.168.2.1
-ping 10.0.0.2<br>
-</code></pre>
-    <ol start="4">
-        <li>Confirm that you receive a response from the routers.</li>
-    </ol>
-    <p>Verify connectivity through the routers using OSPF:</p>
-    <pre class="code"><code>
-ping 192.168.2.1 from PC1
-ping 192.168.1.1 from PC4
-</code> </pre>
-
-    <h3>Verification Questions</h3>
-    <ol>
-        <li>Are all PCs correctly connected to the network?<ul class="YES">YES</ul></li>
-        <li>Have all PCs received the correct IP addresses?<ul class="YES">YES</ul></li>
-        <li>Can the PCs connect to the routers using the <code style="color: black;">ping</code> command?<ul class="YES">YES</ul></li>
-        <li>Has Static Routing and OSPF been configured correctly?<ul class="YES">YES</ul></li>
-    </ol>
-
-                <!-- Link to download the Word document -->
-                <h2>Download Project Document</h2>
-                <p>You can download the complete project  here:</p>
-                <a href="Project2.pkt" download  class="button">Download Project </a><br><br>
-        
-        
-
-    <h3>Project 4: Configuring SSH and Telnet on Routers</h3>
-    <p><strong>Objective:</strong></p>
-    <p>Configure SSH (Secure Shell) and Telnet for remote access to routers, and ensure secure access through SSH.</p>
-
-    <p><strong>Requirements:</strong></p>
-    <ul>
-        <li><strong>Devices:</strong></li>
-        <ul>
-            <li>Two Routers</li>
-            <li>One Switch</li>
-            <li>Two Personal Computers (PCs)</li>
-        </ul>
-                <!-- Image at the beginning of the project with link to open full-size -->
-    <a href="network-setup-image.jpg" target="_blank">
-        <img src="network-setup-image.jpg" alt="Configuring SSH and Telnet on Routers">
-    </a>
-
-        <li><strong>Configurations:</strong></li>
-        <ul>
-            <li>Configure SSH for secure remote access.</li>
-            <li>Configure Telnet for remote access.</li>
-            <li>Verify that SSH is used for secure access and Telnet is restricted.</li>
-        </ul>
-    </ul>
-    <p><strong>Steps</strong></p>
-    <li><strong>Step 1: Physical Network Setup</strong>
-
-    
-        
-    <ol>
-        <li>Connect the PCs to the switchs using Ethernet cables.</li>
-        <li>Connect each switch to a router.</li>
-        <li>Ensure that both routers can communicate with each other.</li>
-    </ol>
-   
-    <li><strong>Step 2: Assign IP Addresses</strong>
-    
-    <p>Assign the following IP addresses to the routers' interfaces:</p>
-    <ul>
-        <li><strong>Router1:</strong> Internal Interface: 192.168.1.1/24</li>
-        <li><strong>Router2:</strong> Internal Interface: 192.168.2.1/24</li>
-    </ul>
-    <p>Ensure that the PCs are configured to use the routers' IP addresses as their default gateway:</p>
-    <ul>
-        <li><strong>PC1:</strong> IP Address: 192.168.1.2, Default Gateway: 192.168.1.1</li>
-        <li><strong>PC2:</strong> IP Address: 192.168.2.2, Default Gateway: 192.168.2.1</li>
-    </ul>
-    <li><strong>Step 3: Configure Telnet on Router1</strong>
-        <p>Generate RSA keys on Router1:</p>
-        <pre class="code"><code>
-    Router1> enable
-    Router1# configure terminal
-    Router1(config)#enable password cisco
-    Router1(config)#username admin password 1234
-    Router1(config)# ip domain-name example.com
-    Router1(config)# crypto rsa key generate modulus 1024
-    Router1(config)# line vty 0 4
-    Router1(config-line)# transport input ssh
-    Router1(config-line)# login local
-    Router1(config-line)# exit
-    Router1(config)# exit
-       </code> </pre>
-    <li><strong>Step 4: Configure Telnet on Router2</strong>
-    
-    <p>Enter configuration mode on Router2:</p>
-    <pre class="code"><code>
-Router2> enable
-Router2# configure terminal
-Router2(config)#enable Secret P@ssw0rd
-Router2(config)#username admin password 1234
-Router2(config)#line vty 0 2
-Router2(config-line)#login local
-Router2(config-line)# exit
-Router2(config)# exit
-   </code> </pre>
-
-    
-  
-    <li><strong>Step 5: Verify the Configuration</strong>
-    
-    <h4>Verify Telnet Configuration:</h4>
-    <p>From PC2, use Telnet to connect to Router2:</p>
-    <pre class="code"><code>
-telnet 192.168.2.1
-   </code> </pre>
-
-
-    <h4>Verify SSH Configuration:</h4>
-    <p>From PC1, use SSH to connect to Router1:</p>
-    <pre class="code"><code>
-ssh admin@192.168.1.1
-  </code>  </pre>
-    
-
-    <h4>Verify Access Control:</h4>
-    <p>Ensure that SSH is working and Telnet is not allowed if SSH is configured properly.</p>
-
-    <h2>Verification Questions</h2>
-    <ol>
-        <li>Can you successfully connect to the router2 using Telnet?<ul class="YES">YES</ul></li>
-        <li>Can you successfully connect to the router1 using SSH?<ul class="YES">YES</ul></li>
-        <li>Is SSH configured correctly and allowing secure access?<ul class="YES">YES</ul></li>
-        <li>Is Telnet access restricted if SSH is configured?<ul class="YES">YES</ul></li>
-    </ol>
-
-    <!-- Link to download the Word document -->
-    <h2>Download Project Document</h2>
-    <p>You can download the complete project document here:</p>
-    <a href="SSH_and_Telnet_Configuration.pkt" download  class="button">Download Project </a><br><br>
-        
-        
-        
-     
-
-
-
-    <!--5-->
-
-
-    <h3>Project 5: Inter-Switch VLAN Configuration with Trunking</h3>
-
-    <p><strong>Objective:</strong></p>
-    <p>Configure VLANs across two switches to enable communication between devices in the same VLAN on different switches.</p>
-
-    <p><strong>Requirements:</strong></p>
-    <ul>
-        <li><strong>Devices:</strong></li>
-        <ul>
-            <li>Two Switches</li>
-            <li>Four Personal Computers (PCs)</li>
-        </ul>
+              <p>The objective of this project is to set up a network that demonstrates the functionality of VLAN Trunking Protocol (VTP), VLANs, EtherChannel, and Port Security. The network includes multiple switches configured with different roles and VLAN assignments.</p>
+              <p><strong>Requirements:</strong></p>
+              
+              
+              <li><strong>Devices:</strong></li>
+              <ul>
+                  <li> Switches</li>
+                  <li> PCs</li>
+                  <li>Ethernet cables</li>
+              </ul>
+          
+                 <!-- Image for the project, can be linked to full size -->
+                 <a href="project8.jpg" target="_blank">
+                  <img src="project8.jpg" alt="Inter-Switch VLAN Configuration with Trunking">
+              </a>
+           
+              <h3>Network Topology</h3>
+              <h3>Server Switch (SW1):</h3>
+              <ul>
+                  <li>Configured as VTP Server</li>
+                  <li>VLANs: 10, 20, 30, 40, 50, 60</li>
+                  <li>EtherChannel on interfaces G1 and G2</li>
+                  <li>SSH enabled for management</li>
+              </ul>
+          
+              <h3>Client Switches (SW2 and SW3):</h3>
+              <ul>
+                  <li>Configured as VTP Clients</li>
+                  <li>EtherChannel on interfaces to Server Switch</li>
+                  <li>VLANs pushed from Server Switch</li>
+                  <li>Specific VLANs assigned to ports</li>
+                  <li>Port Security enabled on access ports</li>
+              </ul>
+          
+              <h3>PCs:</h3>
+              <ul>
+                  <li>Connected to respective VLANs</li>
+              </ul>
+          
+              <h2>Steps to Configure</h2>
+          
+              <h3>1. Configure VTP on Server Switch (SW1):</h3>
+              <pre class="code"><code>
+          Switch1(config)# vtp mode server
+          Switch1(config)# vtp domain mydomain
+          Switch1(config)# vtp password mypassword
+              </code></pre>
+          
+              <h3>2. Create VLANs on Server Switch (SW1):</h3>
+              <pre class="code"><code>
+          Switch1(config)# vlan 10
+          Switch1(config-vlan)# name Management
+          Switch1(config)# vlan 20
+          Switch1(config-vlan)# name Sales
+          Switch1(config)# vlan 30
+          Switch1(config-vlan)# name Engineering
+          Switch1(config)# vlan 40
+          Switch1(config-vlan)# name HR
+          Switch1(config)# vlan 50
+          Switch1(config-vlan)# name Finance
+          Switch1(config)# vlan 60
+          Switch1(config-vlan)# name Admin
+             </code> </pre>
+          
+              <h3>3. Configure EtherChannel on Server Switch (SW1):</h3>
+              <pre class="code"><code>
+          Switch1(config)# interface range f0/1-4
+          Switch1(config-if-range)# channel-group 1 mode active
+          Switch1(config-if-range)#switchport mode trunk
+          Switch1(config-if)# exit
+              </code></pre>
+          
+              <h3>3. Configure EtherChannel on Server Switch (SW1):</h3>
+              <pre class="code"><code>
+          Switch1(config)# interface range f0/5-8
+          Switch1(config-if-range)# channel-group 2 mode active
+          Switch1(config-if-range)#switchport mode trunk
+          Switch1(config-if)# exit
+              </code></pre>
+              <h3>4. Configure VTP on Client Switches (SW2 and SW3):</h3>
+              <pre class="code"><code>
+          Switch(config)# vtp mode client
+          Switch(config)# vtp domain mydomain
+          Switch(config)# vtp password mypassword
+              </code></pre>
+          
+              <h3>5. Configure EtherChannel on Client Switches (SW2 and SW3):</h3>
+              <pre class="code"><code>
+          Switch1(config)# interface range f0/1-4
+          Switch1(config-if-range)# channel-group 1 mode passive
+          Switch1(config-if-range)# switchport mode trunk
+          Switch2(config)# interface range f0/1-4
+          Switch2(config-if-range)# channel-group 2 mode passive
+          Switch2(config-if-range)# switchport mode trunk
+             </code> </pre>
+          
+              <h3>6. Assign VLANs to Ports on Client Switches:</h3>
+              <pre class="code"><code>
+          Switch(config)# interface range fa0/1 - 2
+          Switch(config-if-range)# switchport mode access
+          Switch(config-if-range)# switchport access vlan 10
+          Switch(config)# interface range fa0/3 - 4
+          Switch(config-if-range)# switchport mode access
+          Switch(config-if-range)# switchport access vlan 20
+             </code> </pre>
+          
+              <h3>7. Configure Port Security on Access Ports:</h3>
+              <pre class="code"><code>
+          Switch(config)# interface fa0/1
+          Switch(config-if)# switchport port-security
+          Switch(config-if)# switchport port-security maximum 1
+          Switch(config-if)# switchport port-security violation restrict
+          Switch(config-if)# switchport port-security mac-address sticky
+             </code> </pre>
+          
+              <h3>8. Enable SSH on Server Switch:</h3>
+              <pre class="code"><code>
+          Switch(config)# ip domain-name mydomain.com
+          Switch(config)# crypto key generate rsa
+          Switch(config)# username admin password mypassword
+          Switch(config)# line vty 0 4
+          Switch(config-line)# login local
+          Switch(config-line)# transport input ssh
+             </code></pre>
+          
+              <h2>Verification</h2>
+              <h3>1. Verify VTP Status:</h3>
+              <pre class="code"><code>
+          Switch# show vtp status
+             </code> </pre>
+          
+              <h3>2. Verify VLANs on Client Switches:</h3>
+              <pre class="code"><code>
+          Switch# show vlan brief
+             </code> </pre>
+          
+              <h3>3. Verify EtherChannel Status:</h3>
+              <pre class="code"><code>
+          Switch# show etherchannel summary
+             </code> </pre>
+          
+              <h3>4. Verify Port Security:</h3>
+              <pre class="code"><code>
+          Switch# show port-security interface fa0/1
+             </code> </pre>
+          
+              <h3>5. Verify SSH Access:</h3>
+              <p>Attempt to SSH into the Server Switch using an SSH client:</p>
+              <pre class="code"><code>
+          ssh admin@&lt;server_switch_ip&gt;
+             </code> </pre>
+             <h2>Verification Questions</h2>
+             <ol>
+                 <li>Did you enable VTP on the main switch (SW1)?<ul class="YES">YES</ul>Check with the command: show vtp status</li><br>
+                 <li>Did you create VLANs on the main switch (SW1)?<ul class="YES">YES</ul>Check with the command: show vlan brief</li><br>
+                 <li>Did you configure EtherChannel on the main switch (SW1)?<ul class="YES">YES</ul>Check with the command: show etherchannel summary</li><br>
+                 <li>Did you configure VTP on the client switches (SW2 and SW3)?<ul class="YES">YES</ul>Check with the command: show vtp status</li><br>
+                 <li>Did you configure EtherChannel on the client switches (SW2 and SW3)?<ul class="YES">YES</ul>Check with the command: show etherchannel summary</li><br>
+          
+             </ol>
+                   
+                     <!-- Link to download the Word document -->
+             <h2>Download Project Document</h2>
+             <p>You can download the complete project document here:</p>
+             <a href="project8.jpg" download  class="button">Download Project </a><br><br>
+          
+      
+             <h3>Project 6: VTP (VLAN Trunking Protocol) </h3>
+             <p><strong>Objective:</strong></p>
+             <p>To set up and demonstrate the functionality of VTP (VLAN Trunking Protocol) in a network environment using multiple switches configured as server and clients. This setup aims to simplify the management of VLANs across a network.</p>
+           
+             <p><strong>Requirements:</strong></p>
+           
+           
+             <li><strong>Devices:</strong></li>
+             <ul>
+                 <li><strong>Switch 1 (SW1)</strong>: VTP Server</li>
+                 <li><strong>Switch 2 (SW2)</strong>: VTP Client</li>
+                 <li><strong>Switch 3 (SW3)</strong>: VTP Client</li>
+             </ul>
             <!-- Image for the project, can be linked to full size -->
-    <a href="vlan-trunking-image.jpg" target="_blank">
-        <img src="vlan-trunking-image.jpg" alt="Inter-Switch VLAN Configuration with Trunking">
-    </a>
-        <li><strong>Configurations:</strong></li>
-        <ul>
-            <li>Create VLANs on both switches.</li>
-            <li>Configure a trunk link between the switches to allow VLAN traffic.</li>
-            <li>Verify inter-VLAN communication.</li>
-        </ul>
-    </ul>
-
-    <p><strong>Steps</strong></p>
-    
-    <li><strong>Step 1: Physical Network Setup</strong></li>
-    <ol>
-        <li>Connect each PC to a different port on the switches.</li>
-        <li>Connect the switches using an Ethernet cable for the trunk link.</li>
-    </ol>
-
-    <li><strong>Step 2: Create VLANs on Switches</strong></li>
-    <p><strong>Switch 1 Configuration:</strong></p>
-    <pre class="code"><code>
-Switch1> enable
-Switch1# configure terminal
-Switch1(config)# vlan 10
-Switch1(config-vlan)# name VLAN_10
-Switch1(config-vlan)# exit
-Switch1(config)# vlan 20
-Switch1(config-vlan)# name VLAN_20
-Switch1(config-vlan)# exit
-</code>  </pre>
-
-    <p><strong>Switch 2 Configuration:</strong></p>
-    <pre class="code"><code>
-Switch2> enable
-Switch2# configure terminal
-Switch2(config)# vlan 10
-Switch2(config-vlan)# name VLAN_10
-Switch2(config-vlan)# exit
-Switch2(config)# vlan 20
-Switch2(config-vlan)# name VLAN_20
-Switch2(config-vlan)# exit
-   </code> </pre>
-
-   <li><strong>Step 3: Assign Switch Ports to VLANs</strong></li>
-    <p><strong>Switch 1 Port Assignment:</strong></p>
-    <pre class="code"><code>
-Switch1(config)# interface range FastEthernet0/2-3
-Switch1(config-if-range)# switchport mode access
-Switch1(config-if-range)# switchport access vlan 10
-Switch1(config-if-range)# exit
-Switch1(config)# interface range FastEthernet0/4-5
-Switch1(config-if-range)# switchport mode access
-Switch1(config-if-range)# switchport access vlan 20
-Switch1(config-if-range)# exit
-   </code> </pre>
-
-    <p><strong>Switch 2 Port Assignment:</strong></p>
-    <pre class="code"><code>
-Switch2(config)# interface range FastEthernet0/2-3
-Switch2(config-if-range)# switchport mode access
-Switch2(config-if-range)# switchport access vlan 10
-Switch2(config-if-range)# exit
-Switch2(config)# interface range FastEthernet0/4-5
-Switch2(config-if-range)# switchport mode access
-Switch2(config-if-range)# switchport access vlan 20
-Switch2(config-if-range)# exit
-  </code>  </pre>
-
-  <li><strong>Step 4: Configure Trunk Link between Switches</strong></li>
-    <p><strong>Switch 1 Trunk Configuration:</strong></p>
-    <pre class="code"><code>
-Switch1(config)# interface FastEthernet0/1
-Switch1(config-if)# switchport mode trunk
-
-Switch1(config-if)# exit
-  </code>  </pre>
-
-    <p><strong>Switch 2 Trunk Configuration:</strong></p>
-    <pre class="code"><code>
-Switch2(config)# interface FastEthernet0/1
-Switch2(config-if)# switchport mode trunk
-
-Switch2(config-if)# exit
-   </code> </pre>
-
-   <li><strong>Step 5: Verify VLAN Configuration</strong></li>
-    <p><strong>Verify VLANs:</strong></p>
-    <pre class="code"><code>
-Switch# show vlan brief
-   </code> </pre>
-
-    <p><strong>Verify Trunk Link:</strong></p>
-    <pre class="code"><code>
-Switch# show interfaces trunk
-  </code>  </pre>
-
-  <li><strong>Step 6: Test Connectivity</strong></li>
-    <p><strong>Assign IP Addresses to PCs:</strong></p>
-    <ul>
-        <li><strong>VLAN 10:</strong></li>
-        <ul>
-            <li>PC1 (Switch 1, Port 1): 192.168.10.10, Subnet Mask: 255.255.255.0, Default Gateway: 192.168.10.1</li>
-            <li>PC2 (Switch 2, Port 1): 192.168.10.11, Subnet Mask: 255.255.255.0, Default Gateway: 192.168.10.1</li>
-        </ul>
-        <li><strong>VLAN 20:</strong></li>
-        <ul>
-            <li>PC3 (Switch 1, Port 3): 192.168.20.10, Subnet Mask: 255.255.255.0, Default Gateway: 192.168.20.1</li>
-            <li>PC4 (Switch 2, Port 3): 192.168.20.11, Subnet Mask: 255.255.255.0, Default Gateway: 192.168.20.1</li>
-        </ul>
-    </ul>
-
-    <p><strong>Verify Connectivity:</strong></p>
-    <ol>
-        <li>From PC1, ping PC2 to confirm VLAN 10 communication.</li>
-        <li>From PC3, ping PC4 to confirm VLAN 20 communication.</li>
-        <li>Ensure that PCs in different VLANs (e.g., PC1 and PC3) cannot communicate.</li>
-    </ol>
-
-    <h2>Verification Questions</h2>
-    <ol>
-        <li>Are the VLANs correctly created and named on both switches?<ul class="YES">YES</ul></li>
-        <li>Are the switch ports correctly assigned to their respective VLANs on both switches?<ul class="YES">YES</ul></li>
-        <li>Is the trunk link between the switches configured correctly and allowing VLAN traffic?<ul class="YES">YES</ul></li>
-        <li>Can devices in the same VLAN but on different switches communicate with each other?<ul class="YES">YES</ul></li>
-    </ol>
-
-  <!-- Link to download the Word document -->
-  <h2>Download Project Document</h2>
-  <p>You can download the complete project document here:</p>
-  <a href="VLAN and Trunk.pkt" download  class="button">Download Project </a><br><br>
-      
-      
+            <a href="VTP.jpg" target="_blank">
+               <img src="VTP.jpg" alt="Inter-Switch VLAN Configuration with Trunking">
+           </a>
+           
+             <p><strong>Steps</strong></p>
+             <h3>1. Configure VTP Server (SW1):</h3>
+             <pre class="code"><code>SW1# configure terminal<br>
+           SW1(config)# vtp domain mydomain<br>
+           SW1(config)# vtp mode server<br>
+           SW1(config)# vtp password mypassword<br>
+           SW1(config)# vlan 10<br>
+           SW1(config-vlan)# name IT<br>
+           SW1(config-vlan)# vlan 20<br>
+           SW1(config-vlan)# name HR<br>
+           SW1(config-vlan)# vlan 30<br>
+           SW1(config-vlan)# name Sales<br>
+           SW1(config-vlan)# exit <br></code></pre>
+           
+             <h3>2. Configure VTP Clients (SW2 & SW3):</h3>
+             <pre class="code"><code>SW2# configure terminal<br>
+           SW2(config)# vtp domain mydomain<br>
+           SW2(config)# vtp mode client<br>
+           SW2(config)# vtp password mypassword<br>
+           SW2(config)# exit<br>
+           
+           SW3# configure terminal<br>
+           SW3(config)# vtp domain mydomain<br>
+           SW3(config)# vtp mode client<br>
+           SW3(config)# vtp password mypassword<br>
+           SW3(config)# exit</code></pre>
+           
+             <h3>3. Configure Trunk Links:</h3>
+             <pre  class="code"><code>SW1# configure terminal<br>
+           SW1(config)# interface range fa0/1 - 2<br>
+           SW1(config-if-range)# switchport mode trunk<br>
+           SW1(config-if-range)# exit<br>
+           
+           SW2# configure terminal<br>
+           SW2(config)# interface fa0/1<br>
+           SW2(config-if)# switchport mode trunk<br>
+           SW2(config-if)# exit<br>
+           
+           SW3# configure terminal<br>
+           SW3(config)# interface fa0/1<br>
+           SW3(config-if)# switchport mode trunk<br>
+           SW3(config-if)# exit<br></code></pre>
+           
+             <h3>4. Verify VTP Status:</h3>
+             <pre class="code"><code>SW1# show vtp status<br>
+           SW1# show vlan brief<br>
+           
+           SW2# show vtp status<br>
+           SW2# show vlan brief<br>
+           
+           SW3# show vtp status<br>
+           SW3# show vlan brief<br></code></pre>
+           <p><strong>Steps Summary</strong></p>
+             
+             <ul>
+                 <li>Configure SW1 as VTP Server.</li>
+                 <li>Configure SW2 and SW3 as VTP Clients.</li>
+                 <li>Set VTP domain name and password on all switches.</li>
+                 <li>Create VLANs on the VTP Server.</li>
+                 <li>Configure trunk links between the switches.</li>
+                 <li>Verify VTP and VLAN configurations.</li>
+             </ul>
+             <h2>Verification Questions</h2>
+             <ol>
+                 <li>Did you set the VTP domain name on all switches?<ul class="YES">YES</ul></li>
+                 <li>Did you configure VTP Server mode on the primary switch (SW1)?<ul class="YES">YES</ul></li>
+                 <li>Did you configure VTP Client mode on the other switches (SW2 and SW3)?<ul class="YES">YES</ul></li>
+                 <li>Are all the ports between the switches configured as trunk links?<ul class="YES">YES</ul></li>
+             </ol>
+                   
+                     <!-- Link to download the Word document -->
+             <h2>Download Project Document</h2>
+             <p>You can download the complete project document here:</p>
+             <a href="VTP.pkt" download  class="button">Download Project </a><br><br>
+                 
+   
         
+
     
   
 
 
 
 
-
-  <h3>Project 6: Setting Up a Small Office Network with EtherChannel</h3>
+  <h3>Project 5: Setting Up a Small Office Network with EtherChannel</h3>
 
   <p><strong>Objective:</strong></p>
     <p>
@@ -714,272 +469,526 @@ Switch# show interfaces trunk
   <h2>Download Project Document</h2>
   <p>You can download the complete project document here:</p>
   <a href="etharchannel.pkt" download  class="button">Download Project </a><br><br>
-    
-        
-        
-  <h3>Project7: VTP (VLAN Trunking Protocol) </h3>
-  <p><strong>Objective:</strong></p>
-  <p>To set up and demonstrate the functionality of VTP (VLAN Trunking Protocol) in a network environment using multiple switches configured as server and clients. This setup aims to simplify the management of VLANs across a network.</p>
-
-  <p><strong>Requirements:</strong></p>
 
 
-  <li><strong>Devices:</strong></li>
-  <ul>
-      <li><strong>Switch 1 (SW1)</strong>: VTP Server</li>
-      <li><strong>Switch 2 (SW2)</strong>: VTP Client</li>
-      <li><strong>Switch 3 (SW3)</strong>: VTP Client</li>
-  </ul>
- <!-- Image for the project, can be linked to full size -->
- <a href="VTP.jpg" target="_blank">
-    <img src="VTP.jpg" alt="Inter-Switch VLAN Configuration with Trunking">
-</a>
 
-  <p><strong>Steps</strong></p>
-  <h3>1. Configure VTP Server (SW1):</h3>
-  <pre class="code"><code>SW1# configure terminal<br>
-SW1(config)# vtp domain mydomain<br>
-SW1(config)# vtp mode server<br>
-SW1(config)# vtp password mypassword<br>
-SW1(config)# vlan 10<br>
-SW1(config-vlan)# name IT<br>
-SW1(config-vlan)# vlan 20<br>
-SW1(config-vlan)# name HR<br>
-SW1(config-vlan)# vlan 30<br>
-SW1(config-vlan)# name Sales<br>
-SW1(config-vlan)# exit <br></code></pre>
+    <!--4-->
 
-  <h3>2. Configure VTP Clients (SW2 & SW3):</h3>
-  <pre class="code"><code>SW2# configure terminal<br>
-SW2(config)# vtp domain mydomain<br>
-SW2(config)# vtp mode client<br>
-SW2(config)# vtp password mypassword<br>
-SW2(config)# exit<br>
 
-SW3# configure terminal<br>
-SW3(config)# vtp domain mydomain<br>
-SW3(config)# vtp mode client<br>
-SW3(config)# vtp password mypassword<br>
-SW3(config)# exit</code></pre>
+    <h3>Project 4: Inter-Switch VLAN Configuration with Trunking</h3>
 
-  <h3>3. Configure Trunk Links:</h3>
-  <pre  class="code"><code>SW1# configure terminal<br>
-SW1(config)# interface range fa0/1 - 2<br>
-SW1(config-if-range)# switchport mode trunk<br>
-SW1(config-if-range)# exit<br>
+    <p><strong>Objective:</strong></p>
+    <p>Configure VLANs across two switches to enable communication between devices in the same VLAN on different switches.</p>
 
-SW2# configure terminal<br>
-SW2(config)# interface fa0/1<br>
-SW2(config-if)# switchport mode trunk<br>
-SW2(config-if)# exit<br>
-
-SW3# configure terminal<br>
-SW3(config)# interface fa0/1<br>
-SW3(config-if)# switchport mode trunk<br>
-SW3(config-if)# exit<br></code></pre>
-
-  <h3>4. Verify VTP Status:</h3>
-  <pre class="code"><code>SW1# show vtp status<br>
-SW1# show vlan brief<br>
-
-SW2# show vtp status<br>
-SW2# show vlan brief<br>
-
-SW3# show vtp status<br>
-SW3# show vlan brief<br></code></pre>
-<p><strong>Steps Summary</strong></p>
-  
-  <ul>
-      <li>Configure SW1 as VTP Server.</li>
-      <li>Configure SW2 and SW3 as VTP Clients.</li>
-      <li>Set VTP domain name and password on all switches.</li>
-      <li>Create VLANs on the VTP Server.</li>
-      <li>Configure trunk links between the switches.</li>
-      <li>Verify VTP and VLAN configurations.</li>
-  </ul>
-  <h2>Verification Questions</h2>
-  <ol>
-      <li>Did you set the VTP domain name on all switches?<ul class="YES">YES</ul></li>
-      <li>Did you configure VTP Server mode on the primary switch (SW1)?<ul class="YES">YES</ul></li>
-      <li>Did you configure VTP Client mode on the other switches (SW2 and SW3)?<ul class="YES">YES</ul></li>
-      <li>Are all the ports between the switches configured as trunk links?<ul class="YES">YES</ul></li>
-  </ol>
-        
-          <!-- Link to download the Word document -->
-  <h2>Download Project Document</h2>
-  <p>You can download the complete project document here:</p>
-  <a href="VTP.pkt" download  class="button">Download Project </a><br><br>
-      
-    
-  
-  <h3>Project 8: VTP and VLAN Configuration with EtherChannel and Port Security</h3>
-
-  <p><strong>Objective:</strong></p>
-    <p>The objective of this project is to set up a network that demonstrates the functionality of VLAN Trunking Protocol (VTP), VLANs, EtherChannel, and Port Security. The network includes multiple switches configured with different roles and VLAN assignments.</p>
     <p><strong>Requirements:</strong></p>
-    
-    
-    <li><strong>Devices:</strong></li>
     <ul>
-        <li> Switches</li>
-        <li> PCs</li>
-        <li>Ethernet cables</li>
-    </ul>
-
-       <!-- Image for the project, can be linked to full size -->
-       <a href="project8.jpg" target="_blank">
-        <img src="project8.jpg" alt="Inter-Switch VLAN Configuration with Trunking">
+        <li><strong>Devices:</strong></li>
+        <ul>
+            <li>Two Switches</li>
+            <li>Four Personal Computers (PCs)</li>
+        </ul>
+            <!-- Image for the project, can be linked to full size -->
+    <a href="vlan-trunking-image.jpg" target="_blank">
+        <img src="vlan-trunking-image.jpg" alt="Inter-Switch VLAN Configuration with Trunking">
     </a>
- 
-    <h3>Network Topology</h3>
-    <h3>Server Switch (SW1):</h3>
-    <ul>
-        <li>Configured as VTP Server</li>
-        <li>VLANs: 10, 20, 30, 40, 50, 60</li>
-        <li>EtherChannel on interfaces G1 and G2</li>
-        <li>SSH enabled for management</li>
+        <li><strong>Configurations:</strong></li>
+        <ul>
+            <li>Create VLANs on both switches.</li>
+            <li>Configure a trunk link between the switches to allow VLAN traffic.</li>
+            <li>Verify inter-VLAN communication.</li>
+        </ul>
     </ul>
 
-    <h3>Client Switches (SW2 and SW3):</h3>
-    <ul>
-        <li>Configured as VTP Clients</li>
-        <li>EtherChannel on interfaces to Server Switch</li>
-        <li>VLANs pushed from Server Switch</li>
-        <li>Specific VLANs assigned to ports</li>
-        <li>Port Security enabled on access ports</li>
-    </ul>
+    <p><strong>Steps</strong></p>
+    
+    <li><strong>Step 1: Physical Network Setup</strong></li>
+    <ol>
+        <li>Connect each PC to a different port on the switches.</li>
+        <li>Connect the switches using an Ethernet cable for the trunk link.</li>
+    </ol>
 
-    <h3>PCs:</h3>
-    <ul>
-        <li>Connected to respective VLANs</li>
-    </ul>
-
-    <h2>Steps to Configure</h2>
-
-    <h3>1. Configure VTP on Server Switch (SW1):</h3>
+    <li><strong>Step 2: Create VLANs on Switches</strong></li>
+    <p><strong>Switch 1 Configuration:</strong></p>
     <pre class="code"><code>
-Switch1(config)# vtp mode server
-Switch1(config)# vtp domain mydomain
-Switch1(config)# vtp password mypassword
-    </code></pre>
-
-    <h3>2. Create VLANs on Server Switch (SW1):</h3>
-    <pre class="code"><code>
+Switch1> enable
+Switch1# configure terminal
 Switch1(config)# vlan 10
-Switch1(config-vlan)# name Management
+Switch1(config-vlan)# name VLAN_10
+Switch1(config-vlan)# exit
 Switch1(config)# vlan 20
-Switch1(config-vlan)# name Sales
-Switch1(config)# vlan 30
-Switch1(config-vlan)# name Engineering
-Switch1(config)# vlan 40
-Switch1(config-vlan)# name HR
-Switch1(config)# vlan 50
-Switch1(config-vlan)# name Finance
-Switch1(config)# vlan 60
-Switch1(config-vlan)# name Admin
+Switch1(config-vlan)# name VLAN_20
+Switch1(config-vlan)# exit
+</code>  </pre>
+
+    <p><strong>Switch 2 Configuration:</strong></p>
+    <pre class="code"><code>
+Switch2> enable
+Switch2# configure terminal
+Switch2(config)# vlan 10
+Switch2(config-vlan)# name VLAN_10
+Switch2(config-vlan)# exit
+Switch2(config)# vlan 20
+Switch2(config-vlan)# name VLAN_20
+Switch2(config-vlan)# exit
    </code> </pre>
 
-    <h3>3. Configure EtherChannel on Server Switch (SW1):</h3>
+   <li><strong>Step 3: Assign Switch Ports to VLANs</strong></li>
+    <p><strong>Switch 1 Port Assignment:</strong></p>
     <pre class="code"><code>
-Switch1(config)# interface range f0/1-4
-Switch1(config-if-range)# channel-group 1 mode active
-Switch1(config-if-range)#switchport mode trunk
+Switch1(config)# interface range FastEthernet0/2-3
+Switch1(config-if-range)# switchport mode access
+Switch1(config-if-range)# switchport access vlan 10
+Switch1(config-if-range)# exit
+Switch1(config)# interface range FastEthernet0/4-5
+Switch1(config-if-range)# switchport mode access
+Switch1(config-if-range)# switchport access vlan 20
+Switch1(config-if-range)# exit
+   </code> </pre>
+
+    <p><strong>Switch 2 Port Assignment:</strong></p>
+    <pre class="code"><code>
+Switch2(config)# interface range FastEthernet0/2-3
+Switch2(config-if-range)# switchport mode access
+Switch2(config-if-range)# switchport access vlan 10
+Switch2(config-if-range)# exit
+Switch2(config)# interface range FastEthernet0/4-5
+Switch2(config-if-range)# switchport mode access
+Switch2(config-if-range)# switchport access vlan 20
+Switch2(config-if-range)# exit
+  </code>  </pre>
+
+  <li><strong>Step 4: Configure Trunk Link between Switches</strong></li>
+    <p><strong>Switch 1 Trunk Configuration:</strong></p>
+    <pre class="code"><code>
+Switch1(config)# interface FastEthernet0/1
+Switch1(config-if)# switchport mode trunk
+
 Switch1(config-if)# exit
-    </code></pre>
+  </code>  </pre>
 
-    <h3>3. Configure EtherChannel on Server Switch (SW1):</h3>
+    <p><strong>Switch 2 Trunk Configuration:</strong></p>
     <pre class="code"><code>
-Switch1(config)# interface range f0/5-8
-Switch1(config-if-range)# channel-group 2 mode active
-Switch1(config-if-range)#switchport mode trunk
-Switch1(config-if)# exit
-    </code></pre>
-    <h3>4. Configure VTP on Client Switches (SW2 and SW3):</h3>
-    <pre class="code"><code>
-Switch(config)# vtp mode client
-Switch(config)# vtp domain mydomain
-Switch(config)# vtp password mypassword
-    </code></pre>
+Switch2(config)# interface FastEthernet0/1
+Switch2(config-if)# switchport mode trunk
 
-    <h3>5. Configure EtherChannel on Client Switches (SW2 and SW3):</h3>
-    <pre class="code"><code>
-Switch1(config)# interface range f0/1-4
-Switch1(config-if-range)# channel-group 1 mode passive
-Switch1(config-if-range)# switchport mode trunk
-Switch2(config)# interface range f0/1-4
-Switch2(config-if-range)# channel-group 2 mode passive
-Switch2(config-if-range)# switchport mode trunk
+Switch2(config-if)# exit
    </code> </pre>
 
-    <h3>6. Assign VLANs to Ports on Client Switches:</h3>
-    <pre class="code"><code>
-Switch(config)# interface range fa0/1 - 2
-Switch(config-if-range)# switchport mode access
-Switch(config-if-range)# switchport access vlan 10
-Switch(config)# interface range fa0/3 - 4
-Switch(config-if-range)# switchport mode access
-Switch(config-if-range)# switchport access vlan 20
-   </code> </pre>
-
-    <h3>7. Configure Port Security on Access Ports:</h3>
-    <pre class="code"><code>
-Switch(config)# interface fa0/1
-Switch(config-if)# switchport port-security
-Switch(config-if)# switchport port-security maximum 1
-Switch(config-if)# switchport port-security violation restrict
-Switch(config-if)# switchport port-security mac-address sticky
-   </code> </pre>
-
-    <h3>8. Enable SSH on Server Switch:</h3>
-    <pre class="code"><code>
-Switch(config)# ip domain-name mydomain.com
-Switch(config)# crypto key generate rsa
-Switch(config)# username admin password mypassword
-Switch(config)# line vty 0 4
-Switch(config-line)# login local
-Switch(config-line)# transport input ssh
-   </code></pre>
-
-    <h2>Verification</h2>
-    <h3>1. Verify VTP Status:</h3>
-    <pre class="code"><code>
-Switch# show vtp status
-   </code> </pre>
-
-    <h3>2. Verify VLANs on Client Switches:</h3>
+   <li><strong>Step 5: Verify VLAN Configuration</strong></li>
+    <p><strong>Verify VLANs:</strong></p>
     <pre class="code"><code>
 Switch# show vlan brief
    </code> </pre>
 
-    <h3>3. Verify EtherChannel Status:</h3>
+    <p><strong>Verify Trunk Link:</strong></p>
     <pre class="code"><code>
-Switch# show etherchannel summary
+Switch# show interfaces trunk
+  </code>  </pre>
+
+  <li><strong>Step 6: Test Connectivity</strong></li>
+    <p><strong>Assign IP Addresses to PCs:</strong></p>
+    <ul>
+        <li><strong>VLAN 10:</strong></li>
+        <ul>
+            <li>PC1 (Switch 1, Port 1): 192.168.10.10, Subnet Mask: 255.255.255.0, Default Gateway: 192.168.10.1</li>
+            <li>PC2 (Switch 2, Port 1): 192.168.10.11, Subnet Mask: 255.255.255.0, Default Gateway: 192.168.10.1</li>
+        </ul>
+        <li><strong>VLAN 20:</strong></li>
+        <ul>
+            <li>PC3 (Switch 1, Port 3): 192.168.20.10, Subnet Mask: 255.255.255.0, Default Gateway: 192.168.20.1</li>
+            <li>PC4 (Switch 2, Port 3): 192.168.20.11, Subnet Mask: 255.255.255.0, Default Gateway: 192.168.20.1</li>
+        </ul>
+    </ul>
+
+    <p><strong>Verify Connectivity:</strong></p>
+    <ol>
+        <li>From PC1, ping PC2 to confirm VLAN 10 communication.</li>
+        <li>From PC3, ping PC4 to confirm VLAN 20 communication.</li>
+        <li>Ensure that PCs in different VLANs (e.g., PC1 and PC3) cannot communicate.</li>
+    </ol>
+
+    <h2>Verification Questions</h2>
+    <ol>
+        <li>Are the VLANs correctly created and named on both switches?<ul class="YES">YES</ul></li>
+        <li>Are the switch ports correctly assigned to their respective VLANs on both switches?<ul class="YES">YES</ul></li>
+        <li>Is the trunk link between the switches configured correctly and allowing VLAN traffic?<ul class="YES">YES</ul></li>
+        <li>Can devices in the same VLAN but on different switches communicate with each other?<ul class="YES">YES</ul></li>
+    </ol>
+
+  <!-- Link to download the Word document -->
+  <h2>Download Project Document</h2>
+  <p>You can download the complete project document here:</p>
+  <a href="VLAN and Trunk.pkt" download  class="button">Download Project </a><br><br>
+      
+      
+        
+    
+  
+
+    
+       <h3>Project 3: Configuring SSH and Telnet on Routers</h3>
+    <p><strong>Objective:</strong></p>
+    <p>Configure SSH (Secure Shell) and Telnet for remote access to routers, and ensure secure access through SSH.</p>
+
+    <p><strong>Requirements:</strong></p>
+    <ul>
+        <li><strong>Devices:</strong></li>
+        <ul>
+            <li>Two Routers</li>
+            <li>One Switch</li>
+            <li>Two Personal Computers (PCs)</li>
+        </ul>
+                <!-- Image at the beginning of the project with link to open full-size -->
+    <a href="network-setup-image.jpg" target="_blank">
+        <img src="network-setup-image.jpg" alt="Configuring SSH and Telnet on Routers">
+    </a>
+
+        <li><strong>Configurations:</strong></li>
+        <ul>
+            <li>Configure SSH for secure remote access.</li>
+            <li>Configure Telnet for remote access.</li>
+            <li>Verify that SSH is used for secure access and Telnet is restricted.</li>
+        </ul>
+    </ul>
+    <p><strong>Steps</strong></p>
+    <li><strong>Step 1: Physical Network Setup</strong>
+
+    
+        
+    <ol>
+        <li>Connect the PCs to the switchs using Ethernet cables.</li>
+        <li>Connect each switch to a router.</li>
+        <li>Ensure that both routers can communicate with each other.</li>
+    </ol>
+   
+    <li><strong>Step 2: Assign IP Addresses</strong>
+    
+    <p>Assign the following IP addresses to the routers' interfaces:</p>
+    <ul>
+        <li><strong>Router1:</strong> Internal Interface: 192.168.1.1/24</li>
+        <li><strong>Router2:</strong> Internal Interface: 192.168.2.1/24</li>
+    </ul>
+    <p>Ensure that the PCs are configured to use the routers' IP addresses as their default gateway:</p>
+    <ul>
+        <li><strong>PC1:</strong> IP Address: 192.168.1.2, Default Gateway: 192.168.1.1</li>
+        <li><strong>PC2:</strong> IP Address: 192.168.2.2, Default Gateway: 192.168.2.1</li>
+    </ul>
+    <li><strong>Step 3: Configure Telnet on Router1</strong>
+        <p>Generate RSA keys on Router1:</p>
+        <pre class="code"><code>
+    Router1> enable
+    Router1# configure terminal
+    Router1(config)#enable password cisco
+    Router1(config)#username admin password 1234
+    Router1(config)# ip domain-name example.com
+    Router1(config)# crypto rsa key generate modulus 1024
+    Router1(config)# line vty 0 4
+    Router1(config-line)# transport input ssh
+    Router1(config-line)# login local
+    Router1(config-line)# exit
+    Router1(config)# exit
+       </code> </pre>
+    <li><strong>Step 4: Configure Telnet on Router2</strong>
+    
+    <p>Enter configuration mode on Router2:</p>
+    <pre class="code"><code>
+Router2> enable
+Router2# configure terminal
+Router2(config)#enable Secret P@ssw0rd
+Router2(config)#username admin password 1234
+Router2(config)#line vty 0 2
+Router2(config-line)#login local
+Router2(config-line)# exit
+Router2(config)# exit
    </code> </pre>
 
-    <h3>4. Verify Port Security:</h3>
+    
+  
+    <li><strong>Step 5: Verify the Configuration</strong>
+    
+    <h4>Verify Telnet Configuration:</h4>
+    <p>From PC2, use Telnet to connect to Router2:</p>
     <pre class="code"><code>
-Switch# show port-security interface fa0/1
+telnet 192.168.2.1
    </code> </pre>
 
-    <h3>5. Verify SSH Access:</h3>
-    <p>Attempt to SSH into the Server Switch using an SSH client:</p>
+
+    <h4>Verify SSH Configuration:</h4>
+    <p>From PC1, use SSH to connect to Router1:</p>
     <pre class="code"><code>
-ssh admin@&lt;server_switch_ip&gt;
-   </code> </pre>
-   <h2>Verification Questions</h2>
+ssh admin@192.168.1.1
+  </code>  </pre>
+    
+
+    <h4>Verify Access Control:</h4>
+    <p>Ensure that SSH is working and Telnet is not allowed if SSH is configured properly.</p>
+
+    <h2>Verification Questions</h2>
+    <ol>
+        <li>Can you successfully connect to the router2 using Telnet?<ul class="YES">YES</ul></li>
+        <li>Can you successfully connect to the router1 using SSH?<ul class="YES">YES</ul></li>
+        <li>Is SSH configured correctly and allowing secure access?<ul class="YES">YES</ul></li>
+        <li>Is Telnet access restricted if SSH is configured?<ul class="YES">YES</ul></li>
+    </ol>
+
+    <!-- Link to download the Word document -->
+    <h2>Download Project Document</h2>
+    <p>You can download the complete project document here:</p>
+    <a href="SSH_and_Telnet_Configuration.pkt" download  class="button">Download Project </a><br><br>
+        
+        
+        
+     
+
+
+ 
+  
+    
+  <h3>Project 2: Configuring Static Routing and OSPF</h3>
+
+  <strong><p>Objective</p></strong>
+  <p>Set up and configure Static Routing and OSPF (Open Shortest Path First) between routers.</p>
+
+  <p><strong>Requirements</p></section></strong>
+      
+  <ul>
+      <li><strong>Devices:</strong></li>
+      <ul>
+          <li>Two Routers</li>
+          <li>Two Switchs</li>
+          <li>Three Personal Computers (PCs)</li><br>
+      </ul>
+        <!-- Image at the beginning of the project -->
+  <img src="Project2.jpg" alt="Project2" >
+      <li><strong>Configurations:</strong></li><br>
+      <ul>
+          <li>Assign static IP addresses to each device in the network.</li>
+          <li>Configure Static Routing and OSPF between the routers.</li><br>
+      </ul>
+  </ul>
+
+  <p><strong>Steps</strong></p>
+  <li><strong>Step 1: Physical Network Setup</strong>
+  
+  <ol>
+      <li>Connect the PCs to the switch using Ethernet cables.</li>
+      <li>Connect the Switchs to each router.</li>
+      <li>Connect the routers to each other via the serial interface.</li><br>
+  </ol>
+  <li><strong>Step 2: </strong>
+
+
+  <p>Assign the following IP addresses to the routers:</p>
+  <ul>
+      <li><strong>Router1:</strong></li>
+      <ul>
+          <li>Ethernet Interface: 192.168.1.1</li>
+          <li>Serial Interface: 10.0.0.1</li>
+      </ul>
+      <li><strong>Router2:</strong></li>
+      <ul>
+          <li>Ethernet Interface: 192.168.2.1</li>
+          <li>Serial Interface: 10.0.0.2</li>
+      </ul>
+  </ul>
+  <li><strong>Step 3: Configure Static Routing</strong>
+  
+  <p><strong>Enter configuration mode on Router1:</strong></p>
+  <pre class="code"><code>
+Router1> enable
+Router1# configure terminal
+Router1(config)# interface GigabitEthernet0/1
+Router1(config-if)# ip address 192.168.1.1 255.255.255.0
+Router1(config-if)# no shutdown
+Router1(config-if)# exit
+Router1(config)# interface GigabitEthernet0/0
+Router1(config-if)# ip address 10.0.0.1 255.0.0.0
+Router1(config-if)# no shutdown
+Router1(config-if)# exit
+Router1(config)# ip route 192.168.2.0 255.255.255.0 10.0.0.2
+Router1(config)# exit<br>
+</code></pre>
+
+  <p><strong>Enter configuration mode on Router2:</strong></p>
+  <pre class="code"><code>
+Router2> enable
+Router2# configure terminal
+Router2(config)# interface GigabitEthernet0/1
+Router2(config-if)# ip address 192.168.2.1 255.255.255.0
+Router2(config-if)# no shutdown
+Router2(config-if)# exit
+Router2(config)# interface GigabitEthernet0/0
+Router2(config-if)# ip address 10.0.0.2 255.0.0.0
+Router2(config-if)# no shutdown
+Router2(config-if)# exit
+Router2(config)# ip route 192.168.1.0 255.255.255.0 10.0.0.1
+Router2(config)# exit<br>
+</code></pre>
+
+<li><strong>Step 4: Configure OSPF</strong></li>
+  
+  <p><strong>Enter configuration mode on Router1:</strong></p>
+  <pre class="code"><code>
+Router1> enable
+Router1# configure terminal
+Router1(config)# router ospf 1
+Router1(config-router)# network 192.168.1.0 0.0.0.255 area 0
+Router1(config-router)# network 10.0.0.0 255.255.255 area 0
+Router1(config-router)# exit
+Router1(config)# exit<br>
+</code>  </pre>
+
+  <p><strong>Enter configuration mode on Router2:</strong></p>
+  <pre class="code"><code>
+Router2> enable
+Router2# configure terminal
+Router2(config)# router ospf 1
+Router2(config-router)# network 192.168.2.0 0.0.0.255 area 0
+Router2(config-router)# network 10.0.0.255.255.255 area 0
+Router2(config-router)# exit
+Router2(config)# exit<br>
+</code> </pre>
+
+  <h3>Verify the Solution</h3>
+  <ol>
+      <li>Ensure all PCs are correctly connected to the network.</li>
+      <li>Check that all PCs have received the correct IP addresses.</li>
+      <li>Execute the <code>ping</code> command from one of the PCs to verify the connection to the router:</li>
+  </ol>
+  <pre class="code"><code>
+ping 192.168.1.1
+ping 192.168.2.1
+ping 10.0.0.2<br>
+</code></pre>
+  <ol start="4">
+      <li>Confirm that you receive a response from the routers.</li>
+  </ol>
+  <p>Verify connectivity through the routers using OSPF:</p>
+  <pre class="code"><code>
+ping 192.168.2.1 from PC1
+ping 192.168.1.1 from PC4
+</code> </pre>
+
+  <h3>Verification Questions</h3>
+  <ol>
+      <li>Are all PCs correctly connected to the network?<ul class="YES">YES</ul></li>
+      <li>Have all PCs received the correct IP addresses?<ul class="YES">YES</ul></li>
+      <li>Can the PCs connect to the routers using the <code style="color: black;">ping</code> command?<ul class="YES">YES</ul></li>
+      <li>Has Static Routing and OSPF been configured correctly?<ul class="YES">YES</ul></li>
+  </ol>
+
+              <!-- Link to download the Word document -->
+              <h2>Download Project Document</h2>
+              <p>You can download the complete project  here:</p>
+              <a href="Project2.pkt" download  class="button">Download Project </a><br><br>
+      
+  
+
+
+
+   <h3>Project 1: Setting Up a Small Office Network</h3>
+   <p><strong>Objective:</strong></p>
+   <p>Design and implement a small office network including routers and switches, and configure static IP addresses and DHCP.</p>
+   
+   <p><strong>Requirements:</strong></p>
    <ol>
-       <li>Did you enable VTP on the main switch (SW1)?<ul class="YES">YES</ul>Check with the command: show vtp status</li><br>
-       <li>Did you create VLANs on the main switch (SW1)?<ul class="YES">YES</ul>Check with the command: show vlan brief</li><br>
-       <li>Did you configure EtherChannel on the main switch (SW1)?<ul class="YES">YES</ul>Check with the command: show etherchannel summary</li><br>
-       <li>Did you configure VTP on the client switches (SW2 and SW3)?<ul class="YES">YES</ul>Check with the command: show vtp status</li><br>
-       <li>Did you configure EtherChannel on the client switches (SW2 and SW3)?<ul class="YES">YES</ul>Check with the command: show etherchannel summary</li><br>
+       <li><strong>Devices:</strong>
+           <ul>
+               <li>Router</li>
+               <li>Switch</li>
+               <li>Three Personal Computers (PCs)</li>
+           </ul>
+       </li>
 
+<!-- Image at the beginning of the project -->
+<img src="Small office Network.jpg" alt="Small Office Network Setup" >
+       <li><strong>Configurations:</strong>
+           <ul>
+               <li>Assign static IP addresses to each device in the network.</li>
+               <li>Configure DHCP on the router to provide dynamic IP addresses to devices.</li>
+           </ul>
+       </li>
    </ol>
-         
-           <!-- Link to download the Word document -->
-   <h2>Download Project Document</h2>
-   <p>You can download the complete project document here:</p>
-   <a href="project8.jpg" download  class="button">Download Project </a><br><br>
+
+   <p><strong>Steps:</strong></p>
+   <ol>
+       <li><strong>Step 1: Physical Network Setup</strong>
+           <ol>
+               <li>Connect the PCs to the switch using Ethernet cables.</li>
+               <li>Connect the switch to the router.</li>
+           </ol>
+       </li>
+       <li><strong>Step 2: Assign Static IP Addresses</strong>
+           <ol>
+               <li>Assign the following IP addresses to the PCs:
+                   <ul>
+                       <li>PC1: 192.168.1.10</li>
+                       <li>PC2: 192.168.1.11</li>
+                       <li>PC3: 192.168.1.12</li>
+                       <li>Subnet Mask: 255.255.255.0</li>
+                       <li>Default Gateway: 192.168.1.1 (Router’s IP address)</li>
+                   </ul>
+               </li>
+           </ol>
+       </li>
+       <li><strong>Step 3: Router Configuration</strong>
+           <ol>
+               <li>Assign IP Address to the Router:
+                   <ul>
+                       <li>Router’s IP Address: 192.168.1.1</li>
+                       <li>Subnet Mask: 255.255.255.0</li>
+                   </ul>
+               </li>
+           </ol>
+       </li>
+       <li><strong>Step 4: Configure DHCP</strong>
+           <ol>
+               <li>Enter the configuration mode on the router:
+                   <pre class="code"><code>
+Router> enable
+Router# configure terminal
+Router(config)# interface GigabitEthernet0/0
+Router(config-if)# ip address 192.168.1.1 255.255.255.0
+Router(config-if)# no shutdown
+Router(config-if)# exit
+                   </code></pre>
+               </li>
+               <li>Set up DHCP:
+                   <pre class="code"><code>
+Router(config)# ip dhcp pool OFFICE
+Router(dhcp-config)# network 192.168.1.0 255.255.255.0
+Router(dhcp-config)# default-router 192.168.1.1
+Router(dhcp-config)# dns-server 8.8.8.8
+Router(dhcp-config)# exit<br>
+                   </code></pre>
+               </li>
+           </ol>
+       </li>
+       <li><strong>Step 5: Verify the Solution</strong>
+           <ol>
+               <li>Ensure all PCs are correctly connected to the switch and the router.</li>
+               <li>Check that all PCs have received the correct IP addresses.</li>
+               <li>Execute the ping command from one of the PCs to verify the connection to the router:
+                   <pre class="code"><code>
+ping 192.168.1.1
+                   </code></pre>
+               </li>
+               <li>Confirm that you receive a response from the router.</li>
+           </ol>
+       </li>
+   </ol>
+
+   <p><strong>Verification Questions:</strong></p>
+   <ul>
+       <li>Are all PCs correctly connected to the network? <ul class="YES">YES</ul></li>
+       <li>Have all PCs received the correct IP addresses (static or dynamic)? <ul class="YES">YES</ul></li>
+       <li>Can the PCs connect to the router using the ping command? <ul class="YES">YES</ul></li>
+   </ul>
+   <!-- Link to download the Word document -->
+<h2>Download Project Document</h2>
+<p>You can download the complete project  here:</p>
+<a href="project1.pkt" download  class="button">Download Project </a><br>
+
        
         
         
@@ -998,3 +1007,4 @@ ssh admin@&lt;server_switch_ip&gt;
     </footer>
 </body>
 </html>
+
