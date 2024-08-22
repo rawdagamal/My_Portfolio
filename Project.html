@@ -23,7 +23,7 @@
     <main>
         <section id="projects">
             <h2>PROJECTS IN CCNA ON PACKET TRACER</h2>
-<h3>project 13: Network Configuration and Security Implementation Challenge</h3>
+<h3>Lab 14: Network Configuration and Security Implementation Challenge</h3>
 <h2>Objective</h2>
     <p>This project involves creating a new IPv4 addressing scheme using the 192.168.0.0/24 network to accommodate four subnets, each with different host requirements. The project also includes configuring and securing routers and switches in the network, including the R1 router, which requires interface configurations, basic security settings, and SSH access setup. Additionally, PCs in the Staff, Sales, and IT networks will be configured with both IPv4 and IPv6 addresses, following the provided Addressing Table.</p>
     <h2>Key Tasks</h2>
@@ -40,7 +40,7 @@
              <p>You can download the complete project document here:</p>
              <a href="17.8.2-packet-tracer---skills-integration-challenge.pka" download  class="button">Download Project </a><br><br>
 
-            <h3>project 12: Design and Build a Secure Small Network in Packet Tracer </h3>
+            <h3>Lab 13: Design and Build a Secure Small Network in Packet Tracer </h3>
             <h2>Objective</h2>
             <p>Design, build, configure, and verify a small network using Packet Tracer Physical Mode (PTPM). The network should include basic security measures and use either IPv4 or IPv6 addressing with subnetting.</p>
         
@@ -89,7 +89,7 @@
              <p>You can download the complete project document here:</p>
              <a href="17.8.1-packet-tracer---design-and-build-a-small-network---physical-mode.pka" download  class="button">Download Project </a><br><br>
 
-            <h3>project 11: Network Troubleshooting in Packet Tracer: Diagnosing and Resolving Connectivity Issues</h3>
+            <h3>Lab 12: Network Troubleshooting in Packet Tracer: Diagnosing and Resolving Connectivity Issues</h3>
 
             <h2>Objective</h2>
             <p>Identify and resolve network connectivity issues after a recent network upgrade, focusing on troubleshooting DNS and connectivity problems.</p>
@@ -131,7 +131,7 @@
 
 
 
-            <h3>project 10: Packet Tracer Project: Router Configuration in a LAN</h3>
+            <h3>Lab 11: Packet Tracer Project: Router Configuration in a LAN</h3>
 
             <h2>Project Objective</h2>
             <p>Connect a router to a Local Area Network (LAN) by configuring the router's interfaces and verifying the configurations using various commands.</p>
@@ -173,7 +173,7 @@
 
 
 
-            <h3>Project 9: Packet Tracer Project: Diagnosing and Resolving Default Gateway Connectivity Problems</h3>
+            <h3>Lab 10: Packet Tracer Project: Diagnosing and Resolving Default Gateway Connectivity Problems</h3>
 
 
             <h2>Project Objective</h2>
@@ -200,7 +200,7 @@
   <a href="10.3.5-packet-tracer---troubleshoot-default-gateway-issues.pka" download  class="button">Download Project </a><br><br>
 
 
-            <h3>Project 8: VTP and VLAN Configuration with EtherChannel and Port Security</h3>
+            <h3>Lab 9: VTP and VLAN Configuration with EtherChannel and Port Security</h3>
 
             <p><strong>Objective:</strong></p>
               <p>The objective of this project is to set up a network that demonstrates the functionality of VLAN Trunking Protocol (VTP), VLANs, EtherChannel, and Port Security. The network includes multiple switches configured with different roles and VLAN assignments.</p>
@@ -370,7 +370,7 @@
              <a href="project8.pkt" download  class="button">Download Project </a><br><br>
           
       
-             <h3>Project 7: VTP (VLAN Trunking Protocol) </h3>
+             <h3>Lab 8: VTP (VLAN Trunking Protocol) </h3>
              <p><strong>Objective:</strong></p>
              <p>To set up and demonstrate the functionality of VTP (VLAN Trunking Protocol) in a network environment using multiple switches configured as server and clients. This setup aims to simplify the management of VLANs across a network.</p>
            
@@ -464,15 +464,80 @@
              <a href="VTP.pkt" download  class="button">Download Project </a><br><br>
                  
    
+        <h3> Lab 7 : VLAN Configuration and Network Setup</h3>
+        <h2>Objective</h2>
+        <ul>
+            <li>Verify and configure VLANs.</li>
+            <li>Assign VLANs to switch ports.</li>
+        </ul>
         
-
+        <h2>Key Tasks</h2>
+        <h3>1. Verify Default VLAN Configuration</h3>
+        <ul>
+            <li>Display current VLANs on S1: <code>show vlan brief</code></li>
+            <li>Check connectivity between PCs within the same subnet.</li>
+        </ul>
+        
+        <h3>2. Configure VLANs</h3>
+        <ul>
+            <li>Create and name VLANs on S1, S2, and S3:
+                <pre>
+    <code>
+    vlan 10
+    name Faculty/Staff
+    vlan 20
+    name Students
+    vlan 30
+    name Guest
+    vlan 99
+    name Management&Native
+    vlan 150
+    name VOICE
+    </code>
+                </pre>
+            </li>
+            <li>Verify VLANs using <code>show vlan brief</code></li>
+        </ul>
+        
+        <h3>3. Assign VLANs to Ports</h3>
+        <ul>
+            <li>Configure VLAN assignments on S2 and S3:
+                <pre>
+    <code>
+    interface f0/11
+    switchport mode access
+    switchport access vlan 10
+    interface f0/18
+    switchport mode access
+    switchport access vlan 20
+    interface f0/6
+    switchport mode access
+    switchport access vlan 30
+    </code>
+                </pre>
+            </li>
+            <li>Set up Voice VLAN on S3:
+                <pre>
+    <code>
+    interface f0/11
+    switchport voice vlan 150
+    mls qos trust cos
+    </code>
+                </pre>
+            </li>
+            <li>Verify connectivity and VLAN assignment.</li>
+        </ul>
     
   
 
 
+         <!-- Link to download the Word document -->
+         <h2>Download Project Document</h2>
+         <p>You can download the complete project document here:</p>
+         <a href="3.3.12-packet-tracer---vlan-configuration.pka" download  class="button">Download Project </a><br><br>
 
 
-  <h3>Project 6: Setting Up a Small Office Network with EtherChannel</h3>
+  <h3>Lab 6: Setting Up a Small Office Network with EtherChannel</h3>
 
   <p><strong>Objective:</strong></p>
     <p>
@@ -651,7 +716,7 @@
     <!--4-->
 
 
-    <h3>Project 5: Inter-Switch VLAN Configuration with Trunking</h3>
+    <h3>Lab 5: Inter-Switch VLAN Configuration with Trunking</h3>
 
     <p><strong>Objective:</strong></p>
     <p>Configure VLANs across two switches to enable communication between devices in the same VLAN on different switches.</p>
@@ -796,7 +861,7 @@ Switch# show interfaces trunk
   <p>You can download the complete project document here:</p>
   <a href="VLAN and Trunk.pkt" download  class="button">Download Project </a><br><br>
      
-  <h3>Project 4 : Basic Router Configuration and Network Connectivity Check</h3>
+  <h3>Lab 4 : Basic Router Configuration and Network Connectivity Check</h3>
   <h2>Objectives:</h2>
   <ul>
       <li>Set up the network topology and initialize devices.</li>
@@ -841,7 +906,7 @@ Switch# show interfaces trunk
   <h2>Download Project Document</h2>
   <p>You can download the complete project document here:</p>
   <a href="1.6.2-packet-tracer----configure-basic-router-settings---physical-mode.pka" download  class="button">Download Project </a><br><br>
-       <h3>Project 3: Configuring SSH and Telnet on Routers</h3>
+       <h3>Lab 3: Configuring SSH and Telnet on Routers</h3>
     <p><strong>Objective:</strong></p>
     <p>Configure SSH (Secure Shell) and Telnet for remote access to routers, and ensure secure access through SSH.</p>
 
@@ -959,7 +1024,7 @@ ssh admin@192.168.1.1
  
   
     
-  <h3>Project 2: Configuring Static Routing and OSPF</h3>
+  <h3>Lab 2: Configuring Static Routing and OSPF</h3>
 
   <strong><p>Objective</p></strong>
   <p>Set up and configure Static Routing and OSPF (Open Shortest Path First) between routers.</p>
@@ -1101,7 +1166,7 @@ ping 192.168.1.1 from PC4
 
 
 
-   <h3>Project 1: Setting Up a Small Office Network</h3>
+   <h3>Lab 1: Setting Up a Small Office Network</h3>
    <p><strong>Objective:</strong></p>
    <p>Design and implement a small office network including routers and switches, and configure static IP addresses and DHCP.</p>
    
@@ -1222,7 +1287,3 @@ ping 192.168.1.1
     </footer>
 </body>
 </html>
-
-
-
-
